@@ -1,0 +1,19 @@
+TWO SUM PROBLEM : (OPTIMIZED)
+
+NUMS = [1,6,9]; TARGET = 10;
+Returns the [0,2]
+O(N)
+
+
+let myMap = new Map();
+let complement;
+for(let i=0;i<nums.length;i++){
+complement = target-nums[i];
+if(myMap.has(complement)){
+return [myMap.get(complement),i]
+}
+else{
+myMap.set(nums[i],i)
+}
+}
+
